@@ -1,4 +1,3 @@
-import e from './../e';
 export default function(props)
 {
 
