@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/YarinNIM/react-bulma/issues"
   },
-  "homepage": "https://github.com/YarinNIM/react-bulma#readme"
+  "homepage": "https://github.com/YarinNIM/react-bulma#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2"
+  }
 }
