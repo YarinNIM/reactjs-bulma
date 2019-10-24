@@ -1,16 +1,22 @@
-export default function(props)
-{
+import Helper from './../helper';
 
+export default function(icon, props)
+{
     var props =  Object.assign({
-        state: false,
-        icon: false
+        className: false,
+        icon: false,
+        color: false,
+        size: 'normal'
     }, props);
 
-    if(!props.icon) return null;
+    if (!(icon || false)) return null;
 
-    const state = (props.state || false) ? ' ' + props.state : '';
-    const cs = (props.className || false) ? ' ' + props.className : '';
-    return _.rDom('span',{ className: "icon" + state + cs },
-        _.rDom('i', {className: props.icon })
+    const cs = Helper.join(
+        Helper.textColor(props.color),
+        Helper.is(props.size),
+        props.className
+    );
+    return e('span',{ className: 'icon' + cs },
+        e('i', {className: icon })
     );
 }

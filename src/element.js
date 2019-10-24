@@ -1,7 +1,10 @@
+import box from './element/box';
 import icon from './element/icon';
+import button from './element/button';
+
 export default { 
-    box: {},
-    button: {},
+    box: box,
+    button: button,
     content: {},
     delete: {},
     icon: icon,
