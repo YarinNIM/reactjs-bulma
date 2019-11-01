@@ -1,22 +1,9 @@
 import Helper from './../helper';
 
-export default function(icon, props)
-{
-    var props =  Object.assign({
-        className: false,
-        icon: false,
-        color: false,
-        size: 'normal'
-    }, props);
-
+export default function(icon , className = '') {
     if (!(icon || false)) return null;
+    return e('span',{ className: 'icon' + Helper.join(className) },
+        e('i', { className: icon })
+    );
+};
 
-    const cs = Helper.join(
-        Helper.textColor(props.color),
-        Helper.is(props.size),
-        props.className
-    );
-    return e('span',{ className: 'icon' + cs },
-        e('i', {className: icon })
-    );
-}

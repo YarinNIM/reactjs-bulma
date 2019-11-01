@@ -1,16 +1,17 @@
-import box from './element/box';
+import Helper from './helper';
+import Button from './element/button';
 import icon from './element/icon';
-import button from './element/button';
-import buttons from './element/buttons';
 
 export default { 
-    box: box,
-    button: button,
-    buttons: buttons,
+    box: function(props, ...children) {
+        props.className = 'box' + Helper.join(props.className);
+        return e('div', props, ...children);
+    },
+
+    button: Button.button,
+    buttons: Button.buttons,
     content: {},
-    delete: {},
     icon: icon,
-    image: {},
     notification: {},
     progressBar: {},
     table: {},

@@ -1,44 +1,16 @@
 import Element from './element';
-
 class Layout extends React.Component
 {
     render() {
         return e('div', {className:'container'},
-            Element.box({ color: 'warning', className: 'has-text-danger', }, 
-                e('h1', {}, 'box')
-            ), e('hr'),
-            Element.button({ 
-                color: 'danger', size: 'large', 
-                isOutlined: true, isRounded: true, 
-                leftIcon: 'fas fa-home' 
-            },'good'), e('hr'),
-            Element.buttons(
-                { 
-                    align: 'centered',
-                    hasAddons: true,
-                },
-
-                {
-                    leftIcon: 'fas fa-check', rightIcon:'fas fa-home',
-                    content: 'fdasf'
-                },
-
-                {
-                    leftIcon: 'fas fa-home'
-                },
-
-                {
-                    color: 'warning',
-                    content: e('span',{},'ftesting')
-                }
-            ),
-            e('hr'),
-            Element.icon('fas fa-check', {
-                color: 'danger',
-                size: 'large',
-                className:'fa-spin'
-            }),
-            e('hr')
+            Element.icon('fas fa-home'),
+            Element.box({ className:'has-background-danger' },'fdafas'),
+            Element.button({leftIcon: 'fas fa-check', rightIcon: 'fas fa-home', className:'is-warning', label: 'good'}),
+            Element.buttons({className:'are-small'}, [
+                {label: 'testing', leftIcon: 'fas fa-download', className:'is-primary'},
+                {leftIcon: 'fas fa-check'},
+                {label: 'welcome'}
+            ])
         );
     }
 }
