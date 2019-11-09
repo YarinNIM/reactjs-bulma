@@ -1,5 +1,9 @@
+import Helper from './helper';
 export default {
-    container: {},
+    container: (props, ...children) => {
+        Helper.className('container', props);
+        return e('div',props, ...children);
+    },
     level: {},
     mediaObject: {},
     hero: {},

@@ -32,9 +32,7 @@ const labelComp  = function(withIcon, label)
 
 const Buttons = function(props, buttons) {
     props.className = 'buttons' + Helper.join(props.className);
-    var buttons = buttons.map(function(button) {
-        return Button(button)
-    });
+    var buttons = buttons.map(button => Button(button));
     return e('div', props, ...buttons);
 }
 
