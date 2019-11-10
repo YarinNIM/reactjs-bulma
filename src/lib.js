@@ -1,3 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import FontAwesome from '@fortawesome/fontawesome-free';
+require('@fortawesome/fontawesome-free/js/all');
+window.ReactDOM = require('react-dom');
+window.React = require('react');

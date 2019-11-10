@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development --watch"
+    "dev": "webpack --mode development --watch",
+    "sass": "sass src/bulma.scss dist/bulma.css --watch"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bulma": "^0.8.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.3",
+    "sass": "^1.23.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
