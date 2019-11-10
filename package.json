@@ -1,12 +1,13 @@
 {
   "name": "reactjs-bulma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is the package for React-Bulma",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development --watch",
-    "sass": "sass src/bulma.scss dist/bulma.css --watch"
+    "dev": "webpack --mode development --config webpack.js --watch",
+    "prod": "webpack --mode production --config webpack.prod.js && npm run sass",
+    "sass": "sass src/bulma.scss dist/bulma.css --watch --style compressed"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bulma": "^0.8.0",
+    "clean-webpack-plugin": "^3.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.3",
