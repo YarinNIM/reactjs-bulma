@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development --config webpack.js --watch -p",
     "prod": "webpack --mode production --config webpack.prod.js && npm run sass",
-    "sass": "sass scss/bulma.scss dist/bulma.css --watch --style compressed"
+    "sass": "sass sass/bulma.scss dist/bulma.css --watch --style compressed"
   },
   "repository": {
     "type": "git",
