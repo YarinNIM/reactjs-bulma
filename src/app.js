@@ -37,4 +37,5 @@ class MainLayout extends React.Component
     }
 }
 
+console.log('conso');
 ReactDOM.render(e(MainLayout), document.getElementById('root'));
