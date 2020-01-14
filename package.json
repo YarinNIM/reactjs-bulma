@@ -1,42 +1,42 @@
 {
-  "name": "reactjs-bulma",
-  "version": "0.0.3",
-  "description": "This is the package for React-Bulma",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development --config webpack.js --watch -p",
-    "prod": "webpack --mode production --config webpack.prod.js && npm run sass",
-    "sass": "sass sass/bulma.scss dist/bulma.css --watch --style compressed"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YarinNIM/react-bulma.git"
-  },
-  "keywords": [
-    "React",
-    "Bulma"
-  ],
-  "author": "Yarin NIM",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/YarinNIM/react-bulma/issues"
-  },
-  "homepage": "https://github.com/YarinNIM/react-bulma#readme",
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
-    "bulma": "^0.8.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "redux": "^4.0.5",
-    "sass": "^1.24.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-merge-and-include-globally": "^2.1.24"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "dependencies": {}
+    "name": "reactjs-bulma",
+    "version": "0.0.3",
+    "description": "This is the package for React-Bulma",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack --mode development --config webpack.js --watch -p",
+        "prod": "webpack --mode production --config webpack.prod.js && npm run sass",
+        "sass": "sass sass/bulma.scss dist/bulma.css --watch --style compressed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YarinNIM/react-bulma.git"
+    },
+    "keywords": [
+        "React",
+        "Bulma"
+    ],
+    "author": "Yarin NIM",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/YarinNIM/react-bulma/issues"
+    },
+    "homepage": "https://github.com/YarinNIM/react-bulma#readme",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
+        "bulma": "^0.8.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "redux": "^4.0.5",
+        "sass": "^1.24.4",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10",
+        "webpack-merge-and-include-globally": "^2.1.24"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {}
 }
