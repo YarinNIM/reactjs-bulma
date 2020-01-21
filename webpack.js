@@ -1,50 +1,56 @@
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const Merge = require('webpack-merge-and-include-globally');
+/**
+ * This function is to merge the library files
+ * into a single lib.js file
+ */
 
-function lib(mode)
+function js(file)
 {
-    return mode === 'development' ? [
-        './node_modules/react/umd/react.development.js',
-        './node_modules/react-dom/umd/react-dom.development.js',
-        './node_modules/redux/dist/redux.js'
-    ] : [
-        './node_modules/react/umd/react.production.min.js',
-        './node_modules/react-dom/umd/react-dom.production.min.js',
-        './node_modules/redux/dist/redux.min.js'
-    ]
-
+    return './js/' + file + '.js';
 }
 
-module.exports = (env, options) => {
-    const mode = options.mode || 'development';
+module.exports = (env, opts) => {
+    const mode = opts.mode || 'development';
     return {
         devtool: 'inline-source-map',
         entry: {
-            app: './src/app.js'
+            app: js('app'),
+            ajax: js('ajax'),
+            login: js('login'),
+
+            locale_en: js('locale/en')
+
         },
+
         output: {
             filename: '[name].js',
-            path: path.resolve(__dirname, './dist')
+            path: path.resolve(__dirname, 'dist/js')
+        },
+
+        module: {
+            rules: [
+                { 
+                    test: /\.js$/,
+                    exclude: '/node_modules/',
+                    loader: "babel-loader" 
+                }
+            ]
         },
 
         plugins: [
-            new CleanWebpackPlugin(),
-            new Merge({
-                files: {
-                    'lib.js': lib(mode),
-                    'fontawesome.js': [
-                        './node_modules/@fortawesome/fontawesome-free/js/all.min.js'
-                    ]
-                }
-            })
+            new CopyPlugin([{
+                from : './images',
+                to: 'dist/images'
+            }])
         ],
 
         externals: {
             'react':'React',
-            'react-drom': 'ReactDOM',
+            'react-dom': 'ReactDOM',
             'react-router':'ReactRouter',
-            'object-assign': 'Object.assign'
+            //'object-assign': 'Object.assign'
         }
-    }
+    };
 };
