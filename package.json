@@ -8,20 +8,20 @@
     },
     "scripts": {
         "prod": "webpack --mode production --config webpack.prod.js && npm run sass",
-        "js-lib": "webpack --mode development --config webpack_lib.js",
+        "js-lib": "webpack --mode development --config config_lib.js",
         "sass-bulma": "sass sass/bulma.scss dist/css/bulma.css --style compressed",
         "__comment__": "Use the following scripts only",
         "init-lib": "npm run sass-bulma && npm run js-lib",
-        "dev": "webpack --mode development --config webpack.js --watch",
+        "dev": "webpack --mode development --config config.js --watch",
         "sass-dev": "sass sass:dist/css --style compressed --watch"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.8.3",
-        "@babel/preset-env": "^7.8.3",
+        "@babel/core": "^7.8.4",
+        "@babel/preset-env": "^7.8.4",
         "@babel/preset-react": "^7.8.3",
-        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@fortawesome/fontawesome-free": "^5.12.1",
         "babel-loader": "^8.0.6",
         "bulma": "^0.8.0",
         "clean-webpack-plugin": "^3.0.0",
@@ -30,8 +30,8 @@
         "react-dom": "^16.12.0",
         "redux": "^4.0.5",
         "sass": "^1.25.0",
-        "webpack": "^4.41.5",
-        "webpack-cli": "^3.3.10",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11",
         "webpack-merge-and-include-globally": "^2.1.24"
     }
 }
