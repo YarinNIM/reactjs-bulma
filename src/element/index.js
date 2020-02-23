@@ -1,8 +1,8 @@
 import Helper from './helper';
-import Button from './element/button';
-import icon from './element/icon';
-import image from './element/image';
-import Tag from './element/tag';
+import Button from './button';
+import icon from './icon';
+import image from './image';
+import Tag from './tag';
 
 export default { 
     box: function(props, ...children) {

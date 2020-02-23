@@ -6,9 +6,9 @@ const path = require('path');
  * into a single lib.js file
  */
 
-function js(file)
+function js(file, ext = '.js')
 {
-    return './js/' + file + '.js';
+    return './js/' + file + ext;
 }
 
 module.exports = (env, opts) => {
