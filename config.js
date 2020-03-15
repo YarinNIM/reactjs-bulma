@@ -8,7 +8,7 @@ const path = require('path');
 
 function js(file, ext = '.js')
 {
-    return './js/' + file + ext;
+    return './' + file + ext;
 }
 
 module.exports = (env, opts) => {
@@ -17,11 +17,6 @@ module.exports = (env, opts) => {
         devtool: 'inline-source-map',
         entry: {
             app: js('app'),
-            ajax: js('ajax'),
-            login: js('login'),
-
-            locale_en: js('locale/en')
-
         },
 
         output: {

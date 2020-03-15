@@ -1,4 +1,4 @@
-import Helper from './../../helper';
+import Helper from './../helper';
 
 function box(props, ...children) {
     props = Helper.className('box', props);
