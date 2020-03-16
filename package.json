@@ -1,6 +1,6 @@
 {
   "name": "reactjs-bulma",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "This is for ReactJS + Redux + Bulma package ",
   "main": "index.js",
   "directories": {

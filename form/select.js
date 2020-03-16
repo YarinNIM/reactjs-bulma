@@ -1,4 +1,4 @@
-import Helper from './../../helper';
+import Helper from './../helper';
 
 export default function Select(props, children) {
     props = Helper.className('select', props);

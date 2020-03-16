@@ -1,4 +1,4 @@
-import Helper from './../../helper';
+import Helper from './../helper';
 import selectComp from './select';
 import {icon, Button} from './../element';
 // import File as file from './file';

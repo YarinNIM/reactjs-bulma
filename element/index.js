@@ -62,6 +62,16 @@ export class Button extends React.Component {
     }
 }
 
+export function figure(imgUrl, props = [])
+{
+    props.className = 'image ' + (props.className || '');
+    return e('figure', props,
+        e('img', {src: imgUrl, alt: props.alt})
+    );
+};
+
+
+
 export function Buttons(props, buttons) {
     return e('div', {className: 'buttons ' + (props.className || '')},
         ...buttons.map(function (button) {

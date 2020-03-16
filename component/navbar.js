@@ -4,7 +4,7 @@
  * {brand:[], start: [], end: []}
  */
 import {icon} from './../element';
-import helper from './../../helper';
+import helper from './../helper';
 
 export default class Navbar extends React.Component
 {
